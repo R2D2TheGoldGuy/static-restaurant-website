@@ -1,0 +1,516 @@
+/**********************************
+GENERAL - Applied to all pages
+***********************************/
+
+* { /* Universal Selector */
+  margin: 0; /* Manually coded normalize.css */
+  padding: 0; /* Manually coded normalize.css */
+  list-style: none;
+  text-decoration: none;
+  background-repeat: no-repeat;
+}
+
+p {
+  font-size: 0.825em; /* 0.825*16 = px */
+  margin: 0.5em 0 0.75em;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'nunito', sans-serif;
+  color: #999;
+  background-color: ghostwhite;
+}
+
+img {
+  max-width: 100%;
+}
+
+#wrapper {
+  max-width: 1080px; /* width to be no larger than 1080px but the width can be smaller */
+  margin: 0 auto; /* auto = max width of a page - 1080px in the middle */
+  padding: 0 5%; /* 5% of total width of the wrapper */
+}
+
+
+
+/**********************************
+HEADINGS - Mobile
+***********************************/
+
+h1 {
+  font: normal 1.875em/0.8 sans-serif; /* font-weight, font-size/line-height, font-family; */
+  margin: 20px 0;
+}
+
+h2 {
+  font: normal 0.8em/1.5 sans-serif; /* font-weight, font-size/line-height, font-family; */
+  margin: -15px 0 0;
+  letter-spacing: 1px;
+}
+
+h3 {
+  margin: 1.25em 0 0.5em;
+  line-height: 1.5;
+}
+
+
+
+/**********************************
+HEADER - Mobile
+***********************************/
+
+#headings { /* h1, h2 are in a div together, thus called #headings */
+  text-align: center;
+  margin: 0;
+  color: #fff;
+}
+
+header {
+  background: crimson; /* Background Color (RED) */
+  float: left;
+  margin: 0 0 5px 0;
+  padding: 15px 0 30px 0;
+  width: 100%;
+}
+
+
+
+/**********************************
+NAVIGATION - Mobile
+***********************************/
+
+nav {
+  background: #4d505b; /* Nav background colour */
+  font: 0.825em/1.5 sans-serif; /* Nav font */
+  text-align: center;
+  padding: 0 0 5px; /* top, left/right, bottom */
+  margin: 0 0 30px 0; /* top, right, bottom, left */
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a { /* nav li distance */
+  font-weight: normal;
+  padding: 15px 10px;
+}
+
+nav a, nav a:visited {
+	color: #fff;
+}
+
+nav a.selected, nav a:hover {
+  color: #a0fb71;
+}
+
+
+
+/**********************************
+PAGE: HOME
+***********************************/
+
+hr.hr-styling { /* hr class="hr-styling" */
+  margin: 1.25em 0 0.625em; /* 0.625 x 16 = 10px */
+  border: none; /* No border */
+  border-top: 1px solid gainsboro; /* Size in px, border type, border color */
+}
+
+.homepage-img {
+  margin: -30px 0 0 0; /* top, right, bottom, and left */
+}
+
+.slide-show { /* compensating for other stylesheets */
+	display: none;
+}
+
+#secondary-nav {
+  margin: 0;
+  padding: 0;
+}
+
+#secondary-nav li {
+  float: left;
+  width: 80%;
+  margin: 5% 10%;
+  background-color: #f5eacd;
+}
+
+#secondary-nav li p {
+  margin: 0; /* p elements have a default value, therefore must reset it to 0 */
+  padding: 5%;
+  color: #432f21;
+}
+
+#secondary-nav li a p {
+  text-align: center;
+  background-color: #32313b;
+  color: #00cbe9;
+  font-weight: bold;
+}
+
+
+
+/**********************************
+PAGE: MENUS - Mobile
+***********************************/
+
+.menus-pdf {
+  text-align: center;
+  float: left;
+  width: 75%;
+  margin: 5% 12.5%;
+  padding: 0;
+  background-color: #32313b;
+}
+
+.menus-pdf figcaption {
+  margin: 0;
+  padding: 2.5% 0; /* 'VIEW MENU PDF BOX SIZE' */
+}
+
+.menus-pdf figcaption a {
+  text-align: center;
+  font-size: 1.125em; /* 1.125x16 = 18px */
+  color: #00cbe9;
+}
+
+.menus-pdf figcaption a p {
+  font-weight: bold;
+  margin: -5px 0 0 0;
+}
+
+.menus-pdf a:visited {
+  color: #00cbe9;
+}
+
+.menus-pdf a:hover {
+  color: aqua;
+}
+
+/**********************************
+PAGE: ABOUT - Mobile
+***********************************/
+
+.left-content { /* About photo class */
+  display: block;
+  border-radius: 100%;
+  margin: 50px auto 20px;
+}
+
+.right-content { /* About text */
+  line-height: 1.5;
+}
+
+.primary a:visited { /* pseudo class for visited */
+  color: teal;
+}
+
+.primary a:hover { /* pesudo class for hover */
+  color: salmon;
+}
+
+.contact-links {
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-links a {
+  display: block;
+  background-size: 18.5px;
+  padding: 0 0 0 30px;
+  margin: 0 0 0 5px;
+}
+
+.contact-links li {
+  padding: 10px 0;
+}
+
+.contact-links li a.phone { /* phone background image */
+  background-image: url('../images/phone-link.png');
+}
+
+.contact-links li a.email { /* email background image */
+  background-image: url('../images/email-link.png');
+}
+
+.contact-links li a.twitter { /* twitter icon background image */
+  background-image: url('../images/twitter-link.png');
+}
+
+.contact-links li a:link { /* pesudo class 1 */
+	color: #999;
+}
+
+.contact-links li a:visited { /* pesudo class 2 */
+  color: #999;
+}
+
+.contact-links li a:hover { /* pesudo class 3 */
+  color: salmon;
+}
+
+
+
+/**********************************
+FOOTER - Mobile
+***********************************/
+
+footer {
+  background: #ebe3e0; /* Color of the footer*/
+  font: bold 0.875em/1 sans-serif; /* font-weight, font-size/line-height, font-family*/
+  padding: 10px 0;
+  text-align: center;
+  clear: both;
+  color: #30302f;
+}
+
+.about-bottom {
+  min-height: 1440px;
+}
+
+.contact-bottom{
+  min-height: 720px;
+}
+
+
+
+/**********************************
+MEDIA QUERIES - 480px 800px 1080px
+***********************************/
+
+@media screen and (min-width: 480px) {
+
+  /**********************************
+  HEADINGS (h1, h2) - 480px
+  ***********************************/
+
+  h1 {
+    font-size: 2.625em;
+  }
+
+  h2 {
+    letter-spacing: 2px;
+  }
+
+  hr.hr-styling {
+    margin: 30px 0 10px;
+  }
+
+  p {
+    font-size: 0.875em; /* 0.875x16 = 14px */
+    line-height: 1.5;
+  }
+
+  /**********************************
+  HEADER - 480px
+  ***********************************/
+
+  nav {
+    font-size: 1.2em;
+  }
+
+  /**********************************
+  PAGE: ABOUT - 480px
+  ***********************************/
+
+  .about-bottom {
+    min-height: 1280px;
+  }
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+  /**********************************
+  GENERAL - 800px
+  ***********************************/
+
+  p {
+    font-size: 0.9em;
+    margin: 0 0 0.75em 0;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 2.75em;
+  }
+
+  h2 {
+    font-size: 0.85em;
+    letter-spacing: 2px;
+  }
+
+  h3 {
+    margin: 0 0 0.625em 0;
+    line-height: 1.5;
+  }
+
+  /**********************************
+  HEADER - 800px
+  ***********************************/
+
+  #headings {
+      float: left;
+      margin: 5px 0 0 5%;
+      padding: 0 0 0 10px;
+    }
+
+  header {
+    border-bottom: 5px solid #f5eacd;   /* Nice border for header */
+    margin: 0 0 30px 0;
+    padding: 0 0 30px 0;
+  }
+
+  /**********************************
+  NAVIGATION - 800px
+  ***********************************/
+
+  nav {
+    background: none;
+    float: right;
+    font-size: 1.125em;
+    margin: -110px 5% 0 0;
+    text-align: right;
+    width: 45%;
+  }
+
+  /**********************************
+  PAGE: HOME - 800px
+  ***********************************/
+
+  hr.hr-styling {
+    margin: 30px 0 15px;
+  }
+
+  #secondary-nav li { /* 3 COLUMN LAYOUT */
+    width: 28.3333%; /* 3 * (2.5+2.5) = 15, 100% - 15% = 85%, 85% / 3 = 28.3333% */
+    margin: 2.5%;
+  }
+
+  .menus-pdf {
+    width: 28.3333%;
+    margin: 2.5%;
+  }
+
+  .left-content {
+    margin: 0 auto 40px;
+  }
+
+  /**********************************
+  PAGE: BOOKING - 800px
+  ***********************************/
+
+  form {
+    margin: 0 0 0.75em 0;
+  }
+
+  /**********************************
+  FOOTER - 800px
+  ***********************************/
+
+  footer {
+    color: #48372f;
+    font-size: 1em;
+  }
+
+  footer p {
+    margin: 5px 0 0;
+  }
+
+  .home-bottom {
+    min-height: 380px;
+  }
+
+  .menus-bottom {
+    min-height: 890px;
+  }
+
+  .about-bottom {
+    min-height: 1280px;
+  }
+
+  .contact-bottom{
+    min-height: 900px;
+  }
+}
+
+
+
+@media screen and (min-width: 1080px) {
+
+  /**********************************
+  HEADER - 1080px
+  ***********************************/
+
+  header {
+    padding: 0 0 30px 0; /* Mobile version has 15px instead of 0px padding-top */
+  }
+
+  /**********************************
+  HEADINGS (h1, h2) - 1080px
+  ***********************************/
+
+  h1 {
+    font-size: 3.75em;
+  }
+
+  h2 {
+    font-size: 1.125em;
+    letter-spacing: 3px;
+  }
+
+  /**********************************
+  NAVIGATION - 1080px
+  ***********************************/
+
+  nav {
+    font-size: 1.5em;
+    margin: -125px 5% 0 0;
+  }
+
+  /**********************************
+  PAGE: HOME - 1080px
+  ***********************************/
+
+  #secondary-nav li a p {
+    font-size: 1.25em;
+  }
+
+  h3 {
+    margin: 0 0 0.625em 0;
+    font-size: 1.575em;
+  }
+
+  /**********************************
+  PAGE: BOOKING - 1080px
+  ***********************************/
+
+  p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  /**********************************
+  FOOTER - 1080px
+  ***********************************/
+
+  .home-bottom {
+    min-height: 560px;
+  }
+
+  .menus-bottom {
+    min-height: 940px;
+  }
+
+  .about-bottom {
+    min-height: 1440px;
+  }
+
+  .contact-bottom{
+    min-height: 960px;
+  }
+}

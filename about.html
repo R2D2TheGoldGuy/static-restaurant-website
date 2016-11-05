@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <title>Luciano's Paradise | All DAY EVERY DAY</title>
+    <!-- Insert Google Fonts here (Will not be used in this assignment). -->
+    <link rel="stylesheet" href="css/main.css" type="text/css" title="style-1">
+    <link rel="alternate stylesheet" href="css/main-2.css" type="text/css" title="style-2" >
+    <link rel="alternate stylesheet" href="css/main-3.css" type="text/css" title="style-3">
+    <link rel="stylesheet" href="css/print.css" media="print">
+		<script src="js/scripts.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="set_style_from_cookie()">
+    <header class="main-header" id="even-header">
+      <a href="index.html" id="headings">
+        <h1>Luciano's Paradise</h1>
+        <h2>ALL DAY EVERY DAY</h2>
+      </a>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menus.html">Menus</a></li>
+        <li><a href="about.html" class="selected">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+      </ul>
+	  <div>
+        <form>
+          <input type="submit" onclick="switch_style('style-1');return false;" name="theme" value="Style 1" id="style-1">
+          <input type="submit" onclick="switch_style('style-2');return false;" name="theme" value="Style 2" id="style-2">
+          <input type="submit" onclick="switch_style('style-3');return false;" name="theme" value="Style 3" id="style-3">
+        </form>
+      </div>
+    </nav>
+    <div id="wrapper" class="about-bottom">
+      <section>
+        <img src="images/about-photo.jpg" alt="about photo" class="left-content">
+        <div class="right-content">
+        <h3>About</h3>
+        <p>Founded in 1923, Luciano Columbo is currently the owner of the franchise, his grandparents first started it as a the restaurant but then Luciano began to think big and make his dream become a reality. Luciano and his team had their first restaurant to be originally from the United States but as their success grew they began to expand in other countries such as Australia, Canada, and even in the United Kingdom.</p>
+        <p>As our success continues our reputation also began to significantly grow, in the Australian branch we've become well recognized all across melbourne for our special recipes we created back in Italy. Homemade recipes is what truly creates a unique and authentic taste to a meal.</p>
+        <p>It wasn't too long before we decided to expand and have investors become apart of our restaurant business while signing contracts with businessmen, from that day we decided to become an international franchise serving both high class restaurant meals and at the same time serve quality pizzas in a fast food fashion.</p>
+        <p>Serving customers is not the only thing we do, we also encourage and welcome many talented people such as musicians, artists, comedians, and even magicians to do live performances in our restaurant, this way we can ensure that our customers not only enjoy the food but become entertained at the same time while having a wonderful experience.</p>
+        </div>
+      </section>
+      <div class="primary">
+        <section>
+          <h3>General Information</h3>
+          <p>Please feel free to make an enquiry at any time! At Luciano's Paradise you can do it all online! We want to make sure our customers know what to expect when they arrive. All contact details are listed below, choose the way how you can get in touch with us.</p>
+          <p>Don't miss out on exclusive deals and offers! Get to know us on Facebook now! <a href="https://www.facebook.com/">Click Here</a></p>
+        </section>
+        <section>
+          <h3>Contact Details</h3>
+          <ul class="contact-links">
+            <li><a href="tel:6373-9774" class="phone">(03) 6373-9774</a></li>
+            <li><a href="mailto:ken@example.com" class="email">Lucianos.Paradise@food.com</a></li>
+            <li><a href="https://twitter.com/" class="twitter">@Lucianos.Paradise</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2015 Luciano's Paradise</p>
+    </footer>
+  </body>
+</html>

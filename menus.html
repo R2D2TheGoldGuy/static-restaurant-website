@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <title>Luciano's Paradise | All DAY EVERY DAY</title>
+    <!-- Insert Google Fonts here (Will not be used in this assignment). -->
+    <link rel="stylesheet" href="css/main.css" type="text/css" title="style-1">
+    <link rel="alternate stylesheet" href="css/main-2.css" type="text/css" title="style-2" >
+    <link rel="alternate stylesheet" href="css/main-3.css" type="text/css" title="style-3">
+    <link rel="stylesheet" href="css/print.css" media="print">
+		<script src="js/scripts.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="set_style_from_cookie()">
+    <header class="main-header" id="even-header">
+      <a href="index.html" id="headings">
+        <h1>Luciano's Paradise</h1>
+        <h2>ALL DAY EVERY DAY</h2>
+      </a>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menus.html" class="selected">Menus</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+      </ul>
+	  <div>
+        <form>
+          <input type="submit" onclick="switch_style('style-1');return false;" name="theme" value="Style 1" id="style-1">
+          <input type="submit" onclick="switch_style('style-2');return false;" name="theme" value="Style 2" id="style-2">
+          <input type="submit" onclick="switch_style('style-3');return false;" name="theme" value="Style 3" id="style-3">
+        </form>
+      </div>
+    </nav>
+    <div id="wrapper">
+      <section class="menus-bottom">
+        <figure class="menus-pdf">
+          <img src="images/appetizer-menu.jpg" alt="appetizers menu pdf">
+          <figcaption><a href="view-appetizer-menu.pdf"><p>View Appetizer Menu</p></a></figcaption>
+        </figure>
+        <figure class="menus-pdf">
+          <img src="images/lunch-menu.jpg" alt="lunch menu pdf">
+          <figcaption><a href="view-lunch-menu.pdf"><p>View Lunch Menu</p></a></figcaption>
+        </figure>
+        <figure class="menus-pdf">
+            <img src="images/drinks-menu.jpg" alt="drinks menu pdf">
+            <figcaption><a href="view-drinks-menu.pdf"><p>View Drinks Menu</p></a></figcaption>
+        </figure>
+        <figure class="menus-pdf">
+          <img src="images/menus-wine.jpg" alt="wine menu pdf">
+          <figcaption><a href="view-wine-menu.pdf"><p>View Wine Menu</p></a></figcaption>
+        </figure>
+        <figure class="menus-pdf">
+          <img src="images/restaurant-menu.jpg" alt="dinner menu pdf">
+          <figcaption><a href="view-dinner-menu.pdf"><p>View Dinner Menu</p></a></figcaption>
+        </figure>
+        <figure class="menus-pdf">
+            <img src="images/dessert-menu.jpg" alt="dessert menu pdf">
+            <figcaption><a href="view-dessert-menu.pdf"><p>View Dessert Menu</p></a></figcaption>
+        </figure>
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2015 Luciano's Paradise</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <title>Luciano's Paradise | All DAY EVERY DAY</title>
+    <!-- Insert Google Fonts here (Will not be used in this assignment). -->
+    <link rel="stylesheet" href="css/main.css" type="text/css" title="style-1">
+    <link rel="alternate stylesheet" href="css/main-2.css" type="text/css" title="style-2" >
+    <link rel="alternate stylesheet" href="css/main-3.css" type="text/css" title="style-3">
+    <link rel="stylesheet" href="css/print.css" media="print">
+		<script src="js/scripts.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript">
+/**********************************
+ALERT BOX - JAVASCRIPT
+***********************************/
+
+		function checkData(theForm) {
+
+		var errMsg = ""; // set up a variable to store the error messages in
+
+		if (theForm.reservation.selectedIndex == 0) {
+			errMsg = errMsg + "You must select a type of reservation in the drop down list. \n";
+		}
+
+		if (theForm.month.selectedIndex == 0) {
+			errMsg = errMsg + "You must select a month in the drop down list. \n";
+		}
+
+		if (theForm.day.selectedIndex == 0) {
+			errMsg = errMsg + "You must select a day in the drop down list. \n";
+		}
+
+		// has the last name been entered?
+		if (theForm.lName.value == "") {
+			errMsg = errMsg + "Last Name cannot be blank. \n"; // <p></p> p tag last name
+		}
+
+		// has an email been entered?
+		if (theForm.email.value == "") {
+			errMsg = errMsg + "Email cannot be blank. \n"; // <p></p> p tag email
+		}
+		// given an email has been entered, does it meet the syntax requirements of email address
+		else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(theForm.email.value))) { // p tag email else if
+			errMsg = errMsg + "Invalid email address. \n"; // <p></p> p tag email
+		}
+
+		// The Dropdown List: <option> tags
+		// test if select made in the day drop down list (ie selectedIndex need to be a number other than 0
+
+		// Radio buttons - Time: () 9:00am () 11:00am () 2:00pm
+		// <input type="radio"> tags
+		// Error Message (Alert Box) to see if it is 'CHECKED' - set up a variable to store the status of the test
+		var selected = false;
+		//run a loop to read the radio button array and test each button for being checked
+		for (var index = 0; index < theForm.time.length; index++) {
+			if  (theForm.time[index].checked) { // button
+				selected = true;
+				break;
+			}
+		}
+				// test value of selected to see if a radio button was clicked
+		if (selected == false) {
+			errMsg = errMsg + "Preferred time must be selected. \n";
+		}
+		// END OF RADIO BUTTON
+
+		//Terms & Conditions - Check Box (if its not check, thus will have an error message)
+		//Has the Checkbox been checked? <input type="checkbox" name="cb1" value="accept">
+		if (!theForm.cb1.checked) {
+			errMsg = errMsg + "Please accept the terms and conditions. \n";
+		}
+
+
+		// any error messages to be displayed?
+		if (errMsg != "") {
+			alert(errMsg);
+			return false;
+		}
+		else {
+			return true;
+		}// end of if else
+
+		} // end of function
+	</script>
+  </head>
+  <body onload="set_style_from_cookie()">
+    <header class="main-header" id="even-header">
+      <a href="index.html" id="headings">
+        <h1>Luciano's Paradise</h1>
+        <h2>ALL DAY EVERY DAY</h2>
+      </a>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menus.html">Menus</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html" class="selected">Booking</a></li>
+      </ul>
+	  <div>
+        <form>
+          <input type="submit" onclick="switch_style('style-1');return false;" name="theme" value="Style 1" id="style-1">
+          <input type="submit" onclick="switch_style('style-2');return false;" name="theme" value="Style 2" id="style-2">
+          <input type="submit" onclick="switch_style('style-3');return false;" name="theme" value="Style 3" id="style-3">
+        </form>
+      </div>
+    </nav>
+    <div id="wrapper" class="contact-bottom">
+      <section>
+				<h3>Make a reservation</h3>
+        <form action="#" method="post" onsubmit="return checkData(this)"> <!-- checkData() function-->
+					<p>(Fields marked with an * are required fields)</p>
+					<p>* Reservation Type:
+						<select name="reservation">
+							<option value="">Choose your reservation</option>
+							<option value="1">Restaurant Table</option>
+							<option value="2">Performance</option>
+							<option value="3">Takeaway</option>
+						</select>
+					</p>
+					<p>* Month:
+						<select name="month">
+							<option value="">Choose a month</option>
+							<option value="1">January</option>
+							<option value="2">Feburary</option>
+							<option value="3">March</option>
+							<option value="4">April</option>
+							<option value="5">May</option>
+							<option value="6">June</option>
+							<option value="7">July</option>
+							<option value="8">August</option>
+							<option value="9">September</option>
+							<option value="10">October</option>
+							<option value="11">November</option>
+							<option value="12">December</option>
+						</select>
+					</p>
+					<p>* Day:
+						<select name="day">
+							<option value="">Choose a day</option>
+							<option value="1">Monday</option>
+							<option value="2">Tuesday</option>
+							<option value="3">Wednesday</option>
+							<option value="4">Thursday</option>
+							<option value="5">Friday</option>
+							<option value="6">Saturday</option>
+							<option value="7">Sunday</option>
+						</select>
+					</p>
+					<p>* Time:
+						<input type="radio" name="time" value="9" />9:00am
+						<input type="radio" name="time" value="10" />10:00am
+						<input type="radio" name="time" value="11" />11:00am
+						<input type="radio" name="time" value="12" />12:00pm
+						<input type="radio" name="time" value="1" />1:00pm
+						<input type="radio" name="time" value="2" />2:00pm
+						<input type="radio" name="time" value="3" />3:00pm
+						<input type="radio" name="time" value="4" />4:00pm
+						<input type="radio" name="time" value="5" />5:00pm
+						<input type="radio" name="time" value="6" />6:00pm
+						<input type="radio" name="time" value="7" />7:00pm
+						<input type="radio" name="time" value="8" />8:00pm
+						<input type="radio" name="time" value="9" />9:00pm
+						<input type="radio" name="time" value="10" />10:00pm
+					</p>
+					<p>First Name:
+						<input type="text" name="fName" size="20">
+					</p>
+					<p>* Last Name:
+						<input type="text" name="lName" size="40">
+					</p>
+					<p>* Email Address:
+						<input type="text" maxlength="80" size="60" name="email">
+					</p>
+					<p>Terms and Conditions</p>
+					<p>
+						<textarea rows="6" cols="35" readonly="readonly">Terms and Conditions
+						By agreeing to the terms and conditions you are obligated to do the following when in the premises of our restaurant:
+						- Violate or act agressive in any way to our staff and other customers.
+						- Throw away food intentionally.
+						- Shout or do anything irrational in public.
+						- Do not cut in line.
+						- Follow all restaurant policies.
+						These rules are probably familiar to you, but it is still our duty to maintain these terms and conditions and incorporate them in our restaurant as everyday standards.
+					</textarea>
+				</p>
+				<p>* I will agree to your Terms and Conditions and follow them.
+					<input type="checkbox" name="cb1" value="accept" >
+				</p>
+				<p>
+					<input type="submit" value="Submit Data">
+					<input type="reset" value="Reset">
+				</p>
+			</form>
+        </form>
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2015 Luciano's Paradise</p>
+    </footer>
+  </body>
+</html>

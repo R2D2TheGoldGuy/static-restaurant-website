@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <title>Luciano's Paradise | All DAY EVERY DAY</title>
+    <!-- Insert Google Fonts here (Will not be used in this assignment). -->
+    <link rel="stylesheet" href="css/main.css" type="text/css" title="style-1" media="screen">
+    <link rel="alternate stylesheet" href="css/main-2.css" type="text/css" title="style-2" media="screen">
+    <link rel="alternate stylesheet" href="css/main-3.css" type="text/css" title="style-3" media="screen">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+    <script src="js/scripts.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		var captions = new Array (
+			"Our number 1 classic pizza!<br />",
+			"Another unique masterpiece.<br />",
+			"Presenting class to all customers.<br />",
+			"Having fun!<br />",
+			"A very pleasant view!<br />",
+			"Embracing our origin and heritage.<br />"
+		);
+
+		function processPrevious() {
+			newSlide(-1); // go back 1 (previous)
+		} // end of function
+
+		function processNext() {
+			newSlide(1); // +1 go forward (next)
+		} // end of function
+
+		var index = 0;
+
+		function newSlide(direction) {
+
+			var nbrOfSlides = captions.length;
+
+			index = index + direction;
+
+			if (index < 0) {
+				index = nbrOfSlides - 1;
+			}
+
+			if (index >= nbrOfSlides) {
+				index = 0;
+			}
+
+			// display new slide
+			document.getElementById("photo").src = "images/slideImage" +index +".jpg";
+
+			// display new caption
+			document.getElementById("info").innerHTML = captions[index];
+
+			} // end of function
+		</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="set_style_from_cookie()">
+    <header class="main-header">
+      <a href="index.html" id="headings">
+        <h1>Luciano's Paradise</h1>
+        <h2>ALL DAY EVERY DAY</h2>
+      </a>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="selected">Home</a></li>
+        <li><a href="menus.html">Menus</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+      </ul>
+      <form>
+          <input type="submit" onclick="switch_style('style-1');return false;" name="theme" value="Style 1" id="style-1">
+          <input type="submit" onclick="switch_style('style-2');return false;" name="theme" value="Style 2" id="style-2">
+          <input type="submit" onclick="switch_style('style-3');return false;" name="theme" value="Style 3" id="style-3">
+      </form>
+    </nav>
+    <section>
+      <img src="images/homepage-pizza.jpg" alt="homepage image" class="homepage-img">
+			<img src="images/slideImage0.jpg" alt="homepage image" class="slide-show" id="photo">
+			<div class="slide-show">
+				<p id="info">
+				<script type="text/javascript">
+					document.write(captions[0]);
+				</script>
+				<br />
+				</p>
+				<p>
+					<input type="button" value="&laquo; Previous" onclick="processPrevious()">
+					<input type="button" value="Next &raquo;" onclick="processNext()">
+				</p>
+			</div>
+    </section>
+    <div id="wrapper">
+      <div class="introduction">
+	      <hr class="hr-styling">
+        <!--  <h3>Hello World</h3>
+        <hr class="hr-styling"> -->
+      </div>
+      <section class="home-bottom">
+        <ul id="secondary-nav">
+          <li>
+            <img src="images/our-story.jpg" alt="about page">
+            <p>See how we got started as well as how our recipes became so delicious and yet so unqiue.</p>
+            <a href="about.html"><p>About</p></a>
+          </li>
+          <li>
+            <img src="images/view-menu.jpg" alt="menu page">
+            <p>Feel free to look at our large range of meals, we make sure theres nothing you can't enjoy!</p>
+            <a href="menus.html"><p>View Menu</p></a>
+          </li>
+          <li>
+            <img src="images/make-a-reservation.jpg" alt="contact page">
+            <p>Do it all online! We offer takeaway, delivery, and even your traditional restaurant order.</p>
+            <a href="booking.html"><p>Book Now</p></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+        <p>&copy; 2015 Luciano's Paradise</p>
+    </footer>
+  </body>
+</html>
